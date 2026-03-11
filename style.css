@@ -1,7 +1,9 @@
+/* ===== GENERAL ===== */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #f0f4f8;
+  background: #f0f4f8; /* fond clair */
+  color: #333;
 }
 
 /* Conteneur principal : deux colonnes */
@@ -16,7 +18,7 @@ body {
   overflow: hidden;
 }
 
-/* COLONNE GAUCHE */
+/* ===== COLONNE GAUCHE ===== */
 .sidebar {
   background: #b3d9d5; /* pastel vert INRAE */
   color: #004d4d;
@@ -37,13 +39,22 @@ body {
   text-decoration: none;
 }
 
-/* COLONNE DROITE */
+/* Espacement dans les listes de compétences */
+.sidebar ul > li {
+  margin-bottom: 20px; /* espace entre chaque type de compétence */
+}
+
+.sidebar ul ul li {
+  margin-bottom: 5px; /* espace entre les sous-compétences */
+}
+
+/* ===== COLONNE DROITE ===== */
 .content {
   padding: 40px;
 }
 
 .content h2 {
-  border-bottom: 2px solid #7cc0bb; /* pastel vert plus clair */
+  border-bottom: 2px solid #7cc0bb; /* pastel vert clair */
   padding-bottom: 5px;
   margin-top: 40px;
   display: flex;
@@ -51,12 +62,13 @@ body {
 }
 
 .content h2::before {
-  content: " "; /* laisse emoji dans HTML */
+  content: " "; /* les emojis sont directement dans le HTML */
   margin-right: 10px;
 }
 
+/* Espacement entre les expériences et les jobs */
 .job {
-  margin-bottom: 25px;
+  margin-bottom: 30px; /* espace entre chaque expérience */
 }
 
 .job span {
@@ -70,6 +82,12 @@ ul {
   padding-left: 20px;
 }
 
+/* Espacement pour les sections principales (Expertise, Formations, Profil) */
+.content section {
+  margin-bottom: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media(max-width: 900px){
   .cv-container{
     grid-template-columns: 1fr;
